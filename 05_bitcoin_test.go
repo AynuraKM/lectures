@@ -1,33 +1,25 @@
-package lecture_5
+package main
 
 import (
 	"fmt"
-	assert2 "github.com/magiconair/properties/assert"
 	"github.com/stretchr/testify/assert"
 	"testing"
 	"time"
 )
 
-// Alt + Insert
-
-//название теста должно начинаться с Test
 func TestPayByWallet(t *testing.T) {
 	amount := 50
 	payment := 30
 	w := &Wallet{amount}
-
 	w.Pay(payment)
 
-
-	//было 50, заплатили 30 = ждем остаток в 20
-	assert.Equal(t, w.funds, -1)
+	assert.Equal(t, w.funds, amount-payment)
 }
 
 func TestPayByWalletGivesError(t *testing.T) {
 	amount := 50
 	payment := 60
 	w := &Wallet{amount}
-
 	err := w.Pay(payment)
 	assert.Error(t, err)
 }
@@ -36,42 +28,56 @@ func TestBuyByWallet(t *testing.T) {
 	amount := 50
 	payment := 60
 	w := &Wallet{amount}
-
 	_ = Buy(w, payment)
-	//забудьте про fmt.Println()
-	//if err != nil {
-	//	panic(err)
-	//}
-
 	assert.Equal(t, w.funds, amount-payment)
 }
 
 func TestBuyByCreditCard(t *testing.T) {
-	amount := 100
-	payment := 50
-
-	c := &CreditCard{amount, "Zhannur", time.Now(), nil}
-
+	amount := 50
+	payment := 30
+	c := &CreditCard{funds: amount}
 	_ = Buy(c, payment)
-
 	assert.Equal(t, c.funds, amount-payment)
 }
 
-func TestCheckAndBuy(t *testing.T) {
+//func Test_init(t  *testing.T)  {
+//	b := &Bitcoin{}
+//	b.transactions[0] = 150
+//	b.transactions[1] = -20
+//	b.transactions[2] = 10
+//}
+func TestBuyByBitcoin(t *testing.T) {
+	payment := 30
+	b := &Bitcoin{}
+	b.transactions[0] = 150
+	b.transactions[1] = -20
+	b.transactions[2] = 10
+	_ = Buy(b, payment)
+	fmt.Println(b)
+}
+
+func TestCheckAndBuyWallet(t *testing.T) {
 	amount := 50
 	w := &Wallet{amount}
-
 	CheckAndBuy(w, amount)
-
-	assert.Equal(t, w.funds, 0)
+	assert.Equal(t, w.funds, amount)
 }
 
 func TestCheckPaymentType(t *testing.T) {
-	amount := 100
+	amount := 50
+	c := &CreditCard{amount, "arur", time.Time{}, nil}
+	fmt.Println(CheckPaymentType(c))
+}
 
-	c := &CreditCard{amount, "Zhannur", time.Now(), nil}
+func TestBitcoin(t *testing.T) {
+	b := &Bitcoin{}
+	b.transactions[0] = 150
+	b.transactions[1] = -20
+	b.transactions[2] = 10
+	fmt.Println(b)
+}
 
-	s := CheckPaymentType(c)
-
-	fmt.Println(s)
+func TestGetFundsCredit(t *testing.T) {
+	w := &Wallet{50}
+	fmt.Println(w.GetFunds())
 }

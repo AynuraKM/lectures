@@ -1,6 +1,7 @@
-package lecture_5
+package main
 
 import (
+	"errors"
 	"fmt"
 	"time"
 )
@@ -18,17 +19,20 @@ type CreditCard struct {
 	bonuses    []Bonus
 }
 
+type Bitcoin struct {
+	transactions map[int]int
+	SumOfTrans   int
+}
+
 type Bonus struct {
 	name        string
 	description string
 }
 
 type Payer interface {
-	//if not enough funds - return error
 	Pay(int) error
 }
 
-// все интерфейсы должны заканчиваться на -er | очень редко -able
 type Funder interface {
 	GetFunds() int
 }
@@ -38,16 +42,10 @@ type PayFunder interface {
 	Funder
 }
 
-//todo : выяснить почему после return происходит вычисление остатка
 func (w *Wallet) Pay(amount int) error {
-	// проверить достаточно ли средств
-	// если нет - вернуть ошибку
 	if amount > w.funds {
 		return fmt.Errorf("недостаточно средств")
 	}
-
-	// вычесть средства
-	// вернуть nil
 	w.funds -= amount
 	return nil
 }
@@ -58,6 +56,29 @@ func (c *CreditCard) Pay(amount int) error {
 	}
 
 	c.funds -= amount
+	return nil
+}
+
+//func (b *Bitcoin) init() {
+//	b.transactions = make(map[int]int)
+//	fmt.Println(b)
+//}
+
+func (b *Bitcoin) Pay(amount int) error {
+	SumAllTrans := 0
+	if len(b.transactions) == 0 {
+		return errors.New("not enough funds")
+	}
+
+	for i := 0; i < len(b.transactions); i++ {
+		SumAllTrans += b.transactions[i]
+	}
+	b.SumOfTrans = SumAllTrans
+	if SumAllTrans < amount {
+		return errors.New("not enough funds")
+	}
+
+	b.transactions[len(b.transactions)+1] = amount * (-1)
 	return nil
 }
 
@@ -87,16 +108,20 @@ func (w *Wallet) GetFunds() int {
 }
 
 func CheckPaymentType(p Payer) interface{} {
-	// добавить еще один платежный метод
-	// переписать блок if's на switch
-	if wallet, ok := p.(*Wallet); ok {
-		fmt.Println("ты пользуешься наличкой")
-		return wallet.funds
-	}
+	switch p.(type) {
+	case *Wallet:
+		fmt.Println("ты пользуешься кошельком")
+		return p.(*Wallet).funds
+	case *CreditCard:
+		fmt.Println("ты пользуешься кредиткой ")
+		fmt.Println(p.(*CreditCard).owner)
+		return p.(*CreditCard).funds
+	case *Bitcoin:
+		fmt.Println("Вы используете Биткоин")
+		fmt.Println(p.(*Bitcoin).transactions)
+		return p.(*Bitcoin).SumOfTrans
 
-	if card, ok := p.(*CreditCard); ok {
-		fmt.Println("ты пользуешься кредитной картой | владелец карты : ", card.owner)
-		return card.expireTime
+	default:
+		return nil
 	}
-	return nil
 }
