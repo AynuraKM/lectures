@@ -65,7 +65,7 @@ func TestCheckAndBuyWallet(t *testing.T) {
 
 func TestCheckPaymentType(t *testing.T) {
 	amount := 50
-	c := &CreditCard{amount, "arur", time.Time{}, nil}
+	c := &CreditCard{amount, "Ainura", time.Time{}, nil}
 	fmt.Println(CheckPaymentType(c))
 }
 
