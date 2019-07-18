@@ -40,17 +40,12 @@ func TestBuyByCreditCard(t *testing.T) {
 	assert.Equal(t, c.funds, amount-payment)
 }
 
-//func Test_init(t  *testing.T)  {
-//	b := &Bitcoin{}
-//	b.transactions[0] = 150
-//	b.transactions[1] = -20
-//	b.transactions[2] = 10
-//}
 func TestBuyByBitcoin(t *testing.T) {
 	payment := 30
 	b := &Bitcoin{}
+	b.transactions = make(map[int]int)
 	b.transactions[0] = 150
-	b.transactions[1] = -20
+	b.transactions[1] = -10
 	b.transactions[2] = 10
 	_ = Buy(b, payment)
 	fmt.Println(b)
@@ -71,6 +66,7 @@ func TestCheckPaymentType(t *testing.T) {
 
 func TestBitcoin(t *testing.T) {
 	b := &Bitcoin{}
+	b.transactions = make(map[int]int)
 	b.transactions[0] = 150
 	b.transactions[1] = -20
 	b.transactions[2] = 10

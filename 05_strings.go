@@ -1,31 +1,34 @@
 package main
 
-type Strings []string
+import "fmt"
 
-//type Interface interface {
-//	// Len is the number of elements in the collection.
-//	Len() int
-//	// Less reports whether the element with
-//	// index i should sort before the element with index j.
-//	Less(i, j int) bool
-//	// Swap swaps the elements with indexes i and j.
-//	Swap(i, j int)
-//}
+type Strings struct {
+	str []string
+}
 
-//todo: сделать структуру Strings сортируемой
-//todo: написать тесты для сортировки
 func (s *Strings) Len() int {
-	panic("implement me later!")
+	return len(s.str)
 }
 
-func (s *Strings) Swap(i, j int) {
-	panic("implement me later!")
+func (s *Strings) Swap(i, j int) []string {
+	if s.Less(i, j) {
+		s.str[i], s.str[j] = s.str[j], s.str[i]
+		return s.str
+	}
+	return s.str
 }
 
-func (s *Strings) Less(i, j int) {
-	panic("implement me later!")
+func (s *Strings) Less(i, j int) bool {
+	if s.str[i] > s.str[j]{
+		return false
+	}
+	return true
 }
 
 func main() {
-	//sort.Sort(Strings) // todo: должно работать!
+	s := Strings{[]string{"Rusya", "Kolya", "Summ", "left", "oreng"}}
+	fmt.Println(s.Less(1, 4))
+	fmt.Println(s.Len())
+	fmt.Println(s.Swap)
+
 }

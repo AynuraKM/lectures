@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07317962-8586-4731-81c8-bfb45d56a0c2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/05_lru_cache.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05_lru_cache_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05_strings.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/05_bitcoin_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/05_bitcoin_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/05_strings.go" beforeDir="false" afterPath="$PROJECT_DIR$/05_strings.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +17,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/05_bitcoin.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="66" column="31" selection-start-line="66" selection-start-column="31" selection-end-line="66" selection-end-column="31" />
+            <state>
+              <caret column="12" selection-start-column="12" selection-end-column="12" />
               <folding>
                 <element signature="e#19#44#0" expanded="true" />
               </folding>
@@ -27,29 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/05_strings.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/05_lru_cache.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/05_lru_cache_test.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="12" selection-start-column="12" selection-end-column="12" />
+            <state relative-caret-position="86">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
             </state>
           </provider>
         </entry>
@@ -57,8 +38,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/05_bitcoin_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="43" column="17" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
+            <state relative-caret-position="-110">
+              <caret line="47" column="27" lean-forward="true" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="27" />
               <folding>
                 <element signature="e#14#88#0" expanded="true" />
               </folding>
@@ -82,11 +63,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/05_bitcoin_test.go" />
-        <option value="$PROJECT_DIR$/05_bitcoin.go" />
-        <option value="$PROJECT_DIR$/05_strings.go" />
-        <option value="$PROJECT_DIR$/05_lru_cache.go" />
         <option value="$PROJECT_DIR$/05_lru_cache_test.go" />
+        <option value="$PROJECT_DIR$/05_bitcoin.go" />
+        <option value="$PROJECT_DIR$/05_lru_cache.go" />
+        <option value="$PROJECT_DIR$/05_bitcoin_test.go" />
+        <option value="$PROJECT_DIR$/05_strings.go" />
       </list>
     </option>
   </component>
@@ -138,12 +119,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.Test_init in lectures">
-    <configuration name="go build 05_bitcoin.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Build.go build 05_strings.go">
+    <configuration name="go build 05_strings.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="lectures" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/05_bitcoin.go" />
+      <filePath value="$PROJECT_DIR$/05_strings.go" />
       <package value="lectures" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
@@ -180,45 +161,56 @@
       <pattern value="^TestBuyByBitcoin$" />
       <method v="2" />
     </configuration>
-    <configuration name="Test_init in lectures" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="gobench lectures" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="lectures" />
       <working_directory value="$PROJECT_DIR$" />
-      <framework value="gotest" />
+      <framework value="gobench" />
       <kind value="PACKAGE" />
       <package value="lectures" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^Test_init$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.Test_init in lectures" />
-        <item itemvalue="Go Test.TestBitcoin in lectures" />
+        <item itemvalue="Go Build.go build 05_strings.go" />
         <item itemvalue="Go Test.TestBuyByBitcoin in lectures" />
+        <item itemvalue="Go Test.TestBitcoin in lectures" />
         <item itemvalue="Go Test.05_bitcoin_test.go" />
-        <item itemvalue="Go Build.go build 05_bitcoin.go" />
+        <item itemvalue="Go Test.gobench lectures" />
       </list>
     </recent_temporary>
   </component>
   <component name="TestHistory">
-    <history-entry file="TestBuyByWallet_in_lectures - 2019.07.15 at 23h 52m 51s.xml">
-      <configuration name="TestBuyByWallet in lectures" configurationId="GoTestRunConfiguration" />
+    <history-entry file="go_test_lectures - 2019.07.16 at 03h 14m 56s.xml">
+      <configuration name="go test lectures" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="05_bitcoin_test_go - 2019.07.15 at 23h 54m 12s.xml">
+    <history-entry file="05_lru_cache_test_go - 2019.07.16 at 03h 15m 52s.xml">
+      <configuration name="05_lru_cache_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="go_test_lectures - 2019.07.16 at 18h 07m 13s.xml">
+      <configuration name="go test lectures" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="go_test_lectures - 2019.07.17 at 22h 45m 39s.xml">
+      <configuration name="go test lectures" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="05_bitcoin_test_go - 2019.07.17 at 22h 53m 54s.xml">
       <configuration name="05_bitcoin_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="05_bitcoin_test_go - 2019.07.15 at 23h 54m 47s.xml">
-      <configuration name="05_bitcoin_test.go" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestBuyByBitcoin_in_lectures - 2019.07.16 at 02h 44m 08s.xml">
+    <history-entry file="TestBuyByBitcoin_in_lectures - 2019.07.17 at 22h 55m 01s.xml">
       <configuration name="TestBuyByBitcoin in lectures" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestBitcoin_in_lectures - 2019.07.16 at 02h 44m 49s.xml">
+    <history-entry file="TestBitcoin_in_lectures - 2019.07.17 at 22h 56m 21s.xml">
       <configuration name="TestBitcoin in lectures" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="Test_init_in_lectures - 2019.07.16 at 02h 54m 18s.xml">
-      <configuration name="Test_init in lectures" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestBuyByBitcoin_in_lectures - 2019.07.17 at 22h 57m 18s.xml">
+      <configuration name="TestBuyByBitcoin in lectures" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestBuyByBitcoin_in_lectures - 2019.07.17 at 22h 57m 38s.xml">
+      <configuration name="TestBuyByBitcoin in lectures" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestBuyByBitcoin_in_lectures - 2019.07.19 at 02h 34m 21s.xml">
+      <configuration name="TestBuyByBitcoin in lectures" configurationId="GoTestRunConfiguration" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -239,7 +231,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3289689" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -247,7 +239,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.38625205" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.38625205" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -266,10 +258,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/05_lru_cache_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+          <folding>
+            <element signature="e#13#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/05_lru_cache.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding>
+            <element signature="e#19#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/05_bitcoin_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="43" column="17" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
+        <state relative-caret-position="-110">
+          <caret line="47" column="27" lean-forward="true" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="27" />
           <folding>
             <element signature="e#14#88#0" expanded="true" />
           </folding>
@@ -278,8 +290,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/05_bitcoin.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="66" column="31" selection-start-line="66" selection-start-column="31" selection-end-line="66" selection-end-column="31" />
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
           <folding>
             <element signature="e#19#44#0" expanded="true" />
           </folding>
@@ -288,22 +300,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/05_strings.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/05_lru_cache.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/05_lru_cache_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        <state relative-caret-position="86">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
